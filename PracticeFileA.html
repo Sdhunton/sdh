@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title> Introduction to Programming</title>
+	<style>
+		
+		div{
+			margin: 5% 7%;
+		}
+		
+		html{
+			background-color: lightyellow;
+			margin: 2.5% 7%;
+		}
+		
+		:target{
+			color: white;
+			background-color: blue;
+				
+		}
+			/*:target,p::first-letter{ /*this is a "nested CSS statement"*/
+						color: blue;
+						font-size: 1.75em;
+						background-color:white;
+						border: solid 2px lightgray;
+						padding:.5%;
+					}	*/
+		
+		
+		
+		
+		
+		p::first-line{
+			font-weight: bold;
+		}
+		
+		p::first-letter{
+			color: white;
+			font-size: 1.75em;
+			background-color:blue;
+			border: solid 2px gray;
+			padding:.5%;
+		}
+		
+		#duplicate::after{
+			content:"\2700 \2701 \2702 \2703 \2704 \2705 \2706 \2707 \2708 \2709 \2710 \2711 \2712 \2713 \2714 \2715 \2716 \2717 \2718 \2719 \2720 \2721 \2722 \2723 \2724 \2725 \2726 \2727 \2728 \2729 \2730
+			\2735 \2734 \2735 \2736 \2737 \2738 \2739 \2740 \2741 \2742 \2743 \2744 \2745 \2746
+			\2701 \2700 \2699 \2698 \2697 \2696 \2695 \2694 \2693 \2692 \2693 \2692 \2691 \2690
+			\2500 \2501 \2540 \2550 \2560 \2570 \2580 \2590 \2100 \2200 \2230 \2240 \2050 \2060"; /**/
+		}
+		
+		a,p:hover{
+			color: lightgreen;
+			background-color:green;
+			padding:.5%;
+		}
+		a,p:visited{
+			color: initial;
+			background-color: -moz-initial;
+		}
+	</style>
+	<!-- <script src="myscript.js"></script>  -->
+</head>
+<body>
+	<h1>Introduction to Programming</h1>
+	<h2>with JavaScript</h2>
+	<a href="#1">Select Paragraph 1</a><br><a href="#2">Select Paragraph 2</a>
+		<div id="1">
+	<p>Here is a practice paragraph to test some functions.  You may want to change 
+	some of the code to suit your needs or even make multiple copies of this section.
+	Try addinging links, special characters and effects to test how JavaScript, CSS, JQuery
+	and other languages interact with the document or DOM.  Here is a <a href="#">link</a> to test the functionality of links.
+	</p>
+		</div>
+	
+		<div id="2">
+	<p id="duplicate">
+	This is a duplicate paragraph of the first paragraph. Here is a practice paragraph to test some functions.  You may want to change some of the code to suit your needs or even make multiple copies of this section.	Try addinging links, special characters and effects to test how JavaScript, CSS, JQuery	and other languages interact with the document or DOM.  Here is a <a href="#">link</a> to test the functionality of links.	
+	</p>	
+		</div>	
+<body>
+</html> 

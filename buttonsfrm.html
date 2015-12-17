@@ -1,0 +1,261 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>Espresso Html Document</title>
+
+        <meta name="viewport" content="width=device-width"><!-- To better adapt your page to mobile devices screen -->
+
+        <meta name="author" content="Espresso Html">
+
+        <meta name="description" content="A simple web page I made to test out my ideas">        <meta name="keywords" content="espresso html, iphone">
+
+        <link rel="stylesheet" href="style.css"><!-- You can create and link files within Espresso Html -->        
+
+        <!-- // IE fixes including html5 enabler // -->
+
+        <!--[if lt IE 9]>
+
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js">IE7_PNG_SUFFIX=".png"></script>
+
+        <![endif]-->
+
+        <!--[if lt IE 7]> 
+
+            <link rel="stylesheet" href="ie6.css"> <!-- You need to create this file in order to serve custom rules to old ie6 browsers (if you really really need to :D) -->
+
+        <![endif]-->
+
+        <style>
+
+        /* This is magic: try writing some custom css rules inside the media queries to address specific sreen sizes */
+
+        
+
+
+input[type=button]{
+
+    /*background-color: #E0F0FF;*/
+
+    font-size: 2em;
+
+    margin:2px 3px 2px 3px;
+
+    height: 40px;
+
+    width: 60px;    
+
+    }
+
+
+
+    input[text]{
+
+    font-size: 2em;
+
+    height:60px;
+
+    width: 40px;
+
+    }
+
+
+input[class=add]{
+
+ /**/
+
+    font-size: 2em;
+
+    margin:2px 3px 2px 3px;
+
+    height: 200px;
+
+    width: 70px;    
+
+}
+
+
+
+
+#topsection{
+
+       background-color: #99CCFF;
+
+     }
+
+
+#midsection{
+
+    background-color: lightgray;
+
+    }
+
+
+#numkeys{
+
+    background-color: #6699FF;
+
+}
+
+
+
+#numkeys{
+
+   float: left;
+
+}
+
+
+#side{
+
+    float: left;
+
+    background-color: #E0F0FF; 
+
+    height: 219px;
+
+}
+
+
+#bottom_calc{
+
+  /*  clear:fix;*
+
+    background-color: #E0F0FF
+
+    bottom:  0;
+
+}
+
+
+
+        @media screen and (max-width: 768px) {
+
+                }
+
+        
+
+        @media screen and (max-width: 480px) {
+
+                 }
+
+        </style>
+
+
+    </head>
+
+    <body>
+
+
+<!-- TOP OF PAGE DIV -->
+
+<div id="topsection">
+
+<span>Mind Your Pennies</span>
+
+</div>
+
+
+
+
+<!-- CATEGORIES DIV-->
+
+
+<div id="midsection">
+
+<select name="Categories">
+
+<option value="mortgage_rent">Mortgage Rent</option>
+
+<option value="car_pmt" name="carnote">Car Payment</option>
+
+<option value="car_ins" name="carins">Car Insurance</option>
+
+<option value="util_gaselectric" name="gaselectric">Gas/Electric</option>
+
+<option value="util_watert" name="util_water">Utility - Water</option>
+
+<option value="propertax" name="propertax">Propery Tax</option>
+
+<option value="tele" name="tele">Telephones</option>
+
+</select>
+
+<br>
+
+<input type="text" value="0" name="amt"  label="Amount"></input><br>
+
+</div>
+
+
+
+
+<!-- NUMBERS DIV -->
+
+<div id="calcbody">
+
+    <div id="numkeys">
+
+<input type="button" value="/" name="divide"></input>
+
+<input type="button" value="*" name="multiply"></input>
+
+<input type="button" value="-" name="minus"></input><br>
+
+<input type="button" value="7" name="seven"></input>
+
+<input type="button" value="8" name="eight"></input>
+
+<input type="button" value="9" name="nine"></input>
+
+<br>
+
+<input type="button" value="4" name="four"></input>
+
+<input type="button" value="5" name="five"></input>
+
+<input type="button" value="6" name="six"></input><br>
+
+<input type="button" value="1" name="one"></input>
+
+<input type="button" value="2" name="two"></input>
+
+<input type="button" value="3" name="three"></input><br>
+
+<input type="button" value="0" name="zero"></input>
+
+<input type="button" value="." name="dot"></input>
+
+</div>
+
+
+  <div id="side">
+
+<input type="button" class="add" value="+" name="plus"></input>
+
+  </div>
+
+</div>
+
+<div id="bottom_calc">
+
+<input type="button" class="add_amt" value="Add Amount" name="add_amt">
+
+
+<input type="button" class="clear_amt" value="Clear Amount" name="clear_amt">
+
+</div>
+
+
+
+<script defer src="script.js"></script><!-- You can create a js file and link it to your html doc. "defer" makes your script load last -->
+
+    </body>
+
+</html>

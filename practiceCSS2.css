@@ -1,0 +1,68 @@
+body {
+	/*font-family:'fontname',cursive, sans-serif;*/
+	color: #0020ff;
+	background:  #000000 /*url('graphicfile') repeat*/;
+
+}
+
+
+
+/*Change the color of the links, Remove the underline property from the links*/
+a{
+	color: #faf4c2;
+	text-decoration: none;
+
+}
+
+
+
+h1{
+	font-size:  1.750em;
+	letter-spacing: -1.5px;
+}
+
+
+
+h2{
+	font-size:  1.500em;
+	color: #b40cff;	
+}
+
+
+
+.btn
+{
+	color: #faf3bc;
+	background: #4fb69f url('image.png') no-repeat right top;
+	padding: 15px 30px;
+	margin: 40px 0px;
+	border-radius: 25px;
+	text-transform: uppercase;
+}
+
+
+.btn:hover
+{
+	background-color: #4cc4a7;
+}
+
+/*an id element*/
+#intro{
+
+	margin: 50px 0 75px 0;
+
+}
+
+
+#img-item1 img{
+	border: 8px solid #faf3bc;
+	margin: 0 0 20px 0;
+}
+
+
+#copyright{
+	border-top: 8px solid #2a0400;
+	padding: 10px 0px;
+	margin: 15px 0px;
+	text-align: center:
+}

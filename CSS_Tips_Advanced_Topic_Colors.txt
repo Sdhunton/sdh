@@ -1,0 +1,110 @@
+CSS Tips Advanced Topic - Colors
+
+
+/***********************
+	COLOR
+
+*************************/
+
+hexadecimal chars:  
+0 - 9, A- F
+
+RGB
+
+r-red
+g - green
+b - blue
+/***********************
+
+*************************/
+http://www.w3.org/TR/css3-color/#svg-color
+http://colorschemedesigner.com/
+
+
+color: red;
+(red, green, blue, purple, orange, 
+lightblue, tomato, sandybrown)
+
+
+background-color: #fff;
+
+
+
+/**
+
+NOTE:  COLORS can be abbreviated
+if all 6 of the characters using
+hexadecimal notation is the same.
+
+**/
+
+
+/***********************
+    RGB METHOD
+*************************/
+
+
+background-color:  rgb(65,105,25);
+
+RANGE:  0 (min val) - 255 (max val)
+
+
+Adding the "Alpha value - .9 (controls the opacity)"
+
+ background-color:  rgba(65,105,25, .9);
+
+/*"a" is added to "rgb" to add the alpha value*/
+
+
+
+
+
+/***********************
+       HSL METHOD
+*************************/
+
+background-color: hsl(240, 70%, 55%);
+
+(**Hue, saturation, lightness)
+
+RANGE:   (Hue - angle on the color 
+wheel based on angles of degrees)
+
+      STARTS at:
+/*  Six Major Color Values
+in 60 degrees*/
+
+red:  0 degrees
+
+yellow:  60 degrees
+
+green:  120 degrees
+
+cyan:  180 degrees
+
+blue:  240 degrees
+
+magenta:  300 degrees
+
+
+
+/* Saturation */
+0% -  No color
+50% -  grayscale
+100% - full color
+
+
+
+/* Lightness */
+0% -  Black
+50% - Normal
+100% - White
+
+
+
+background-color: hsla(240, 70%, 55%, .7);
+
+/*"a" is added to "hsl" to add the alpha value*/
+
+HSL 
+

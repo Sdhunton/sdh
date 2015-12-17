@@ -1,0 +1,516 @@
+jQuery("h1");
+jQuery("p");
+
+or 
+
+$("h1");
+$("p");
+
+
+
+
+Changing the DOM's element:
+
+
+$("h1").text("Where would you like to go?");
+
+
+
+===============================================
+
+
+Allowing the DOM to finish loading before executing jQuery:
+
+jQuery(document).ready(function(){
+	Some code inside here.
+});
+
+
+$(document).ready(function(){
+
+	Insert code here
+});
+
+
+
+
+
+
+
+Setting jQuery to wait until the DOM is finished loading, then execute code:
+
+
+jQuery(document).ready(function(){
+
+	$("h1").text("Where would you like to go?");
+
+});
+
+
+===============================================
+
+
+
+Try the following code below:
+(Same it as an HTML file.)
+
+
+<!DOCTYPE HTML>
+<HTML lang="en">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+
+
+<!--   
+or use Google CDN -
+
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+</head> 
+
+
+-->
+
+
+
+
+</head>
+
+
+	<body>
+		<p>If you click on me, I will disappear.</p>
+		<p>Click me away!</p>
+		<p>Click me too!</p>
+	</body>
+</html>
+
+
+
+
+
+===============================================
+
+
+
+This is another sample of jQuery from w3schools.com:
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="jQuery-1.10.2.min.js"></script>
+	</head>
+	<body>
+
+		<h2>This is a paragraph heading</h2>
+		<p>This is a paragraph.</p>
+		<p>This is another paragraph.</p>
+		<button>Click Me</button>
+
+
+<!-- Below is the script for the button -->
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("p").hide();
+		});
+	});
+	</script>
+
+	</body>
+</html>
+
+
+
+
+
+===============================================
+
+
+This practice hides only a specific button based on the id:
+
+<!DOCTYPE html>
+<html lan="en">
+	<head>
+	<script src="jQuery-1.10.2.min.js"></script>
+	</head>
+	<body>
+
+		<h2>This is a paragraph heading</h2>
+		<p>This is a paragraph.</p>
+		<p id="test">This is another paragraph.</p>
+		<button>Click Me</button>
+
+
+<!-- Below is the script for the button -->
+
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("#test").hide();
+	});
+});
+
+</script>
+
+
+	</body>
+</html>
+
+
+
+===============================================
+
+Using jQuery with Click events on specific HTML elements:
+
+
+$("p").click(function(){
+	$("p").hide();
+
+});
+
+
+
+or better
+
+$("p").click(function(){
+	$(this).hide();
+
+});
+
+
+*Note:  both hide all paragraphs within the DOM.  
+However, the "this" keyword will only hide the specific element clicked on.
+
+
+
+===============================================
+
+
+The double click method:
+
+$("h1").dblclick(function(){
+	$(this).hide();
+});
+
+
+
+===============================================
+
+
+Using the mouseenter() method in jQuery:
+
+$("#p1").mouseenter(function(){
+	alert("You entered p1!");
+});
+
+
+===============================================
+
+
+Using the mouseleave() method in jQuery:
+
+$("#p1").mouseleave(function(){
+	alert("Good Bye!  You have left p1!");
+});
+
+
+
+===============================================
+
+
+using the mousedown() method in jQuery:
+
+$("#p1").mousedown(function(){
+	alert("The mouse button has been pressed down over p1!");
+});
+
+
+
+
+===============================================
+
+using the mouseup() method in jQuery:
+
+$("#p1").mouseup(function(){
+	alert("The mouse button has been released or is up over p1!");
+});
+
+
+
+===============================================
+
+using the hover() method in jQuery:
+
+$("#p1").hover(function(){
+  alert("You entered p1!");
+  },
+  function(){
+  alert("Bye! You now leave p1!");
+}); 
+
+===============================================
+
+using the focus() method in jQuery:
+
+$("input").focus(function(){
+  $(this).css("background-color","#cccccc");
+}); 
+
+
+
+===============================================
+using the blur() method in jQuery:
+
+$("input").blur(function(){
+	$(this).css("background-color","#ffffff")
+});
+
+===============================================
+
+$("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
+
+
+$(selector).show(speed,callback);
+
+The optional speed parameter specifies the speed of the hiding/showing, and can take the following values: "slow", "fast", or milliseconds.
+Syntax:
+$(selector).hide(speed,callback);
+
+$(selector).show(speed,callback); 
+
+
+
+
+This method uses a slow disolve timed in milliseconds:
+
+$("button").click(function(){
+  $("p").hide(1000);
+});
+
+===============================================
+
+
+$("button").click(function(){
+  $("p").toggle();
+});
+
+
+
+or
+
+
+ $(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
+
+================================
+
+
+FADING METHODS:
+
+
+    fadeIn()
+    fadeOut()
+    fadeToggle()
+    fadeTo()
+
+Syntax:
+$(selector).fadeIn(speed,callback);
+
+
+
+$("button").click(function(){
+  $("#div1").fadeIn();
+  $("#div2").fadeIn("slow");
+  $("#div3").fadeIn(3000);
+});
+
+
+
+As HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+</head>
+
+<body>
+<p>Demonstrate fadeIn() with different parameters.</p>
+<button>Click to fade in boxes</button>
+<br><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+</body>
+</html>
+
+
+FADE TOGGLE:
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+<button>Click to fade in/out boxes</button>
+<br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+</html>
+
+
+
+=================================================
+
+SLIDING METHOD:
+
+
+slide methods:
+
+    slideDown()
+    slideUp()
+    slideToggle()
+
+example:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+ 
+<style type="text/css"> 
+#panel,#flip
+{
+padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+#panel
+{
+padding:50px;
+display:none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+
+=================================================
+
+TOGGLE SLIDING DOWN AND UP EXAMPLE:
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+ 
+<style type="text/css"> 
+#panel,#flip
+{
+padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+#panel
+{
+padding:50px;
+display:none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+
+=================================================
+
+
+
+
+

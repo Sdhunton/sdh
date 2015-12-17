@@ -1,0 +1,111 @@
+CSS Advanced Tips Number and Text Types
+
+For additional info, go to:
+
+http://www.w3.org/TR/CSS2/propidx.html
+
+
+
+/*  */
+
+
+
+/************************
+  FONTS
+
+***********************/
+
+font-weight: bold;
+font: normal sans-serif; /*sans serif is the default*/
+
+text-align: center;
+text-decoration: underline;
+
+
+
+
+/*********
+  AUTO
+**********/
+auto
+
+EXAMPLE:  margin: auto;
+
+/* THE DEFAULT VALUE for certain properties.
+This is autocalculated by the browser */
+
+
+
+
+/**********
+  INHERIT
+************/
+inherit
+
+
+EXAMPLE:
+  p{ color: red;}
+  a{ color: inherit;}
+
+/* Here the anchor (link) element will inherit the 
+color value of the paragraph */
+
+
+
+
+
+/**********
+  INITIAL
+***********/
+initial
+
+
+  p{ color: red;}
+  strong{ color: initial;}
+/*Designated as the initial value.  Chrome
+and Safari support this without prefixes.
+
+Firefox needs the "-moz-" prefix
+
+Example:  strong{ color: -moz-initial;}
+
+IE does not support this yet.
+*/
+
+
+
+
+div:after{
+	content: "A string with \"escaped\" double quotes";
+	font-size: 1.5em;
+	color:blue;
+}
+
+
+background-img: url( 'bg.jpg'); or background-img: url("bg.jpg" );
+
+/* single or double quotes can be used and have a 
+space either before the URL or AFTER 
+the URL within the quotes */
+
+
+margins, text-indent and background properties 
+can take negative values.
+
+EXAMPLE:
+
+margin:  -5em;
+
+
+
+/********************
+PERCENTAGES
+
+********************/
+percentages are used with:  width, margin, 
+font-size  and padding
+
+
+*NOTE:   For "Font-size", the percentage is 
+relative to the parent element. 
+

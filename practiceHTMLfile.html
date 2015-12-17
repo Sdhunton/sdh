@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Practice HTML Page for experimenting</title>
+</head>
+
+	<body>
+	<div id="wrapper">
+
+		<h1>Learning HTML Basics by example</h1>
+
+		<p><strong>HMTL</strong> is the main &quot;programming language&quot; for internet web pages.  It is
+
+		the base or <em>foundation</em>for web pages.  HTML is the <strong><em>first</em><strong> web programming
+
+		language every programmer must learn.  Following learning HTML you should also learn <strong>&quot;CSS&quot;</strong> 
+
+		or <em>Cascading Style Sheets</em> which another progamming language that is heavily used for styling web pages.
+
+		This web page is designed to teach HTML by example. 
+
+	<br><br>
+
+		HTML <em><strong>elements<strong></em> which are also called &quot;tags&quot; by some, 
+
+		follow some very simple rules and by example.  HTML is <strong>NOT</strong> hard to learn in general. 
+
+	<br> 
+		  Below are some of the basic rules:</p>
+		<ol>
+			<li>Almost every HTML tag must have a matching element tag.</li>
+				<p>An example is the Paragraph tag. it is typed like this:
+				<code><p>This is a simple paragraph.  
+					Observe that the "closing" angle bracket
+					ends with a "/" before it. </p></code></p>
+			
+
+			<li>Tags or elements can be surrounded by or &quot; nested &quot; inside another HTML Tag. </li>
+				<p><code><p><strong>This piece of text is nested or surrounded by other tags.</strong></p></code></p>
+			
+			<li>Most HTML elements can have either an &quot;<strong>ID</strong>&quot; or a &quot;<strong>class</strong>&quot;</li>
+
+				<ol>
+					<li>Example of an ID</li> 
+						<code><h1 id="thisHeader">This Header</h1></code>
+					<li>Example of a CLASS</li> 
+						<code><p id="Thispara">This Header</p></code>
+				</ol>
+
+			<li>Almost every element in HTML is <strong>NOT</strong> &quot;case-sensitive.  
+				This means you can type almost every HTML element in all <strong>lower-case letters.</strong>
+				</li>
+
+			<li>HTML is very <em>&quot;forgiving&quot;</em>.  This means you can mispell some tags 
+				but your web page will still load but with some errors. So double-check your code.</li>
+
+			<li>Some of the most common HTML tags which do not have a matching element tag are:</li>
+				<ol>
+					<li><strong>&lt; BR &gt;<strong> - Used for hard line breaks or like the &quot;return&quot; key on a keyboard.</li>
+
+					<li><strong><code><!DOCTYPE html></code></strong> - This must be included to make all web pages HTML5 compliant.  It tells the 
+						web browser what type of document the file is.  Search the web for an explanation of what this tag does.</li>
+
+					<li><strong>&lt; IMG &gt;<strong> - Used for pictures and graphic files.</li>
+							<code><img scr="bunnyRabit.jpg"></code>
+
+					<li><strong>&lt; META &gt;<strong> - Used to describe the information also called <em>metadata</em> within the webpage.
+						This tag is placed in between the opening and closing <strong><em>Head</em></strong> tag</li>
+						<code><meta name="description" content="Basic HTML guide">
+						    <meta name="keywords" content="HTML,CSS,learning,tutorial,web programming">
+						    <meta name="author" content="SDHunton">
+						    <meta charset="UTF-8">
+						</code>
+					
+
+					<li><strong>&lt; WBR &gt;<strong> - Used for force hard line breaks 
+						in blocks of text when the when the text will not normally wrap around.</li>  
+					<li>This element is supported in most browsers.</li>		
+				</ol>
+
+					<li>For information on HTML element visit the <strong><a href="http://www.W3.org">www.w3.org</a><strong> or World Wide Web Consortium
+					or <a href="http://w3schools.com">w3schools.com</a> for free lessons on HTML, CSS and other web programming language basics.</li>
+	</ol>
+<br>
+<br>	
+		<h1>This is an <strong>&lt; H1 &gt;<strong> Heading</h1>
+
+		<h2>This is an <strong>&lt; H2 &gt;<strong> Heading</h2>
+
+		<h3>This is an <strong>&lt; H3 &gt;<strong> Heading</h3>
+
+		<h4>This is an <strong>&lt; H4 &gt;<strong> Heading</h4>
+
+		<h5>This is an <strong>&lt; H5 &gt;<strong> Heading</h5>
+
+		<h6>This is an <strong>&lt; H6 &gt;<strong> Heading</h6>
+
+		<p>This is a paragraph about the &quot;Practice HTML Page&quot; for experimenting with HTML and other web languages paragraph.</p>
+
+		<strong><p>This text uses the HTML <em>&lt; STRONG &gt;</em> tag. It makes text BOLD. </p></strong>		
+		
+		<em><p>This text uses the HTML <strong>&lt; EM &gt;</strong> tag.  It makes text appear Italicized. </p></em>
+
+
+		<div id="niceIndent">
+			<p>This is a paragraph inside of an HTML<strong>&lt; DIV &gt;</strong tag.  DIV tags make organizing information easy.  
+			They are often used to separate blocks of text or other items visually on a web page.  They should <strong><em>ALWAYS be used instead of tables.</em></strong>  
+			Tables should be used to display items in tabular form.  Also keep in mind that tables do not always display well on different sized screens.  
+			So design and choose your settings well for tables.</p>
+		</div>
+		<div id="colorBlock">
+			<p>This is another parapraph <strong> &lt; P &gt; </strong> inside of an HTML <strong>&lt; DIV &gt;</strong> tag.   </p>
+		</div>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+ADVANCED CSS TIPS 2
+
+/*************************************
+	ABSOLUTE LENGTH UNITS
+
+ lenghts and measurements
+
+See the W3C's website for specific units
+
+http://www.w3.org/TR/css3-values/#absolute-lengths
+*************************************/
+
+Centimeters - cm
+
+Millimeters - mm
+
+Inches - in
+
+Picas - pc
+
+Points - pt
+
+Pixels - px
+
+
+/**************************
+
+RELATIVE LENGTHS:
+*****************************
+Viewport-relative units
+
+NOTE:  IE 9+, Firefox 19+, 
+Chrome 26+,
+Opera 15+
+Fully support The 
+relative Viewport
+
+
+Safar 6 for iOS & iOS 
+support some feature
+of the viewport
+
+to verify go to:
+http://caniuse.com/viewport-units
+*******************************/
+
+ex Unit - ex example: 3ex
+
+/* Equal to the current font's lowercase letter "x" height.  They do not 
+scale based on a related element.  For example, if the 
+body of the document is set for a specific font size, the text
+element will scale to the x of that font size in the body specified. 
+ */
+
+
+
+em unit - em example 3em
+
+/***********  The calculation for converting 
+
+from pixel's to ems
+
+1em = 16px /*The browser's default value*/
+
+12px / 16px = .75em
+Here 12px is the existing size for the element.  
+16px is equivalent to 1 em
+
+"EM's" are relative to other nested elements which
+can cause problems with how the font content is rendered
+within the page.
+
+*********/
+
+
+
+
+
+/************************
+
+"REM" UNIT
+
+NOTE: this is new and
+is part of CSS3
+
+***********************/
+
+EXAMPLE
+
+p{
+   font-size: 5rem:
+}
+
+
+/* Stands for Root Element of the Page */
+
+
+
+/************************
+
+  Viewport-relative units:
+
+   vw, vh, vmin
+
+Partially supported in Chrome
+and IE 9+
+***************************/
+
+  vw - Viewport width 
+
+
+  vh - Viewport height
+
+  vmin - Viewport minimum value 
+
+
+
+

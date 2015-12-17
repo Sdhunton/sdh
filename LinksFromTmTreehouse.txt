@@ -1,0 +1,16 @@
+links from treehouse
+8/22/13
+
+http://daneden.me/animate/
+
+http://blog.alexmaccaw.com/jswebapps-csrf
+
+http://kineticjs.com/
+
+http://topcoat.io/topcoat/
+
+http://html5doctor.com/the-classlist-api/
+
+http://www.sublimetext.com/~jps/animated_gifs_the_hard_way.html
+
+http://tympanus.net/Development/AnimatedBooks/

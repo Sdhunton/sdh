@@ -1,0 +1,51 @@
+<?php
+	$countries = array();
+	$countries[0] = array(
+		"code" => "US",
+		"name" => "United States"
+		"capital" => "Washington, D.C.",
+		"population" => "225000000",
+		"anthem" => "The Star-Spangled Banner"
+); ?>
+
+
+<?php 
+	$countries[1] = array(
+		"code" => "DE",	
+		"name" => "Germany"
+		"capital" => "Berlin",
+		"population" => "81999600",
+		"anthem" => "Song of the Germans"
+);
+?>	
+
+
+
+
+<?php
+$countries = array(
+	"code"  => "US",
+	"Name" => "United States",
+	"capital" => "Washington, D.C.",
+	"population" => "2225000000",
+	"anthem" => "The Star-Spangled Banner"
+);
+?>
+
+
+
+<!--<pre><?php //var_dump($countries[0][""]); ?></pre> -->
+
+
+
+
+<?php foreach($countries as $country  ?>
+<h1><?php echo $country["name"]; ?></h1>
+<dl>
+	<dt><?php echo $country["name"]; ?></dt>
+	<dd><?php echo $country["code"]; ?></dd>
+	<dd><?php echo $country["capital"]; ?></dd>
+	<dd><?php echo $country["population"]; ?></dd>
+</dl>
+
+<?php ); ?>

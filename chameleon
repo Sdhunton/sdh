@@ -1,0 +1,322 @@
+
+moodlelogo
+
+    About▼
+    News▼
+    Support▼
+    Community▼
+    Development▼
+    Downloads▼
+
+You are here
+
+    Home
+     ► Moodle Docs
+     ► English
+     ► Chameleon theme
+
+
+This wiki is for Moodle 1.9. For up-to-date documentation on the latest stable version of Moodle, see Moodle Docs 2.5.
+Chameleon theme
+(Redirected from Chameleon)
+Jump to: navigation, search
+Themes
+
+    Theme basics
+    Theme reference
+    Themes 2.0
+    Theme settings
+    Theme directory
+    Chameleon theme
+    Custom corners
+    Sources
+    Standards
+    W3C validation
+    Theme config file
+    Themes FAQ 
+
+
+Moodle1.6
+
+Chameleon is an interactive Moodle theme. You are welcome to try it at the Chameleon theme test site - please login with username and password "chameleon".
+Contents
+
+    1 Using Chameleon
+        1.1 How does Chameleon change its colours?
+        1.2 Which tags to change
+        1.3 Saving your changes
+        1.4 Once your theme is completed
+        1.5 Alternative uses
+    2 Installing Chameleon
+        2.1 Copy files from Chameleon to your theme
+        2.2 Edit your theme files
+        2.3 Edit Chameleon theme files
+        2.4 Done now 2 Temp CSS will change
+        2.5 Troubleshooting
+            2.5.1 Shift click does not open the Chameleon dialog
+            2.5.2 Your changes are lost on page reload
+    3 Tips and Tricks
+        3.1 How can I change the background of the "messages" with Chameleon?
+        3.2 How can I change the background of the "chat" window with Chameleon?
+    4 See also
+
+Using Chameleon
+How does Chameleon change its colours?
+
+    Shift-click anywhere on the page to open a floating window showing all elements under the mouse
+    Click on elements in the list to create a CSS selector - one or as many as you need
+    Click on the "Set Styles" button and set the styles of your choice
+    View the changes immediately 
+
+Chameleon allows almost complete control over styling elements in Moodle. It makes working with themes easier for theme designers and opens up a wide range of experimental uses for interface designers. Just change and work with the changed page and go on optimizing your theme whilst you work with Moodle.
+
+Chameleon makes use of Ajax technologies.
+
+    TIP: If you find that the styles don't save, check to make sure that the files in your theme folder are set so that your webserver has permission to modify them. 
+
+Which tags to change
+
+The easy way to find this out is to use Firefox with the Web developer extension installed. You can then press Ctrl-Shift-Y to change your mouse cursor to crosshairs so that whatever you hover over, it displays the CSS information (e.g. div#content) in the status bar at the bottom of the browser page.
+
+When changing tags, be aware that chameleon sometimes doesn't see things if you initially add them via free-edit. Use the built-in editor in the 'set styles' or 'overview' section first, then use free-edit to alter them.
+
+Some sample tags:
+
+body {
+ background-colour #000000;
+}  
+
+- alters the background for everything apart from the blocks and topic sections
+
+div.sideblock div.header {
+  background-image: url(pix/header.jpg);
+}
+
+- alters the header area of the blocks on all pages to have an image
+Saving your changes
+
+As you work, you have the option to save changes in a temporary file, or save them to the theme CSS file on the server. All temporarily saved changes may be reverted.
+Once your theme is completed
+
+Chameleon does a lot of work behind the scenes as the page loads. This extra work can slow down the display of the page, particularly as your theme files grow bigger. Once your theme is completed and there is no need to be running the Chameleon interface, you may disable the interactive theme by editing the line in config.php from "true" to "false".
+
+    $THEME->chameleonenabled = false; 
+
+
+Now, no extra code will be run on page load and your customised theme will behave exactly like any other Moodle theme. (Please note that this only applies to editing users - a non-editing user will never have any of the extra code running when they view a page.)
+Alternative uses
+
+In addition to creating a complete theme, Chameleon may also be used to help make changes to your existing theme. Simply experiment with Chameleon until you have achieved the change you desire, then copy the css in the "Free Edit" tab to a style sheet in your theme folder.
+Installing Chameleon
+
+You may add the Chameleon engine to any existing theme as follows:
+Copy files from Chameleon to your theme
+
+    Copy the "ui" folder from the Chameleon theme folder to your theme folder. 
+
+    Copy the two files temp_user_styles.css and user_styles.css from your Chameleon folder to your theme folder. Set write permissions for these two files that PHP can write the changed CSS properties to the files. You may choose to delete all CSS properties in these files if you want to start from scratch. 
+
+Edit your theme files
+
+header.html
+
+    Add the include line in header.html at (line 9): 
+
+    <?php include('ui/chameleon.php'); ?> 
+
+      7     <link rel="shortcut icon" href="<?php echo 
+$CFG->wwwroot.'/theme/'.current_theme() ?>/favicon.ico" />
+      8
+      9     <?php include('ui/chameleon.php'); ?>
+     10     <?php include("$CFG->javascript"); ?>
+     11 </head>
+     12
+
+Edit Chameleon theme files
+
+config.php
+
+    Add the Chameleon vars in the theme/chameleon/ config.php file (i.e., not the system) and turn them on with the variable found around (line 99 to 109): 
+
+    $THEME->chameleonenabled = true; 
+
+     89
+     90 $THEME->makenavmenulist = false;
+     91
+     92 /// By setting this to true, then you will have access to a
+     93 /// new variable in your header.html and footer.html called
+     94 /// $navmenulist ... this contains a simple XHTML menu of
+     95 /// all activities in the current course, mostly useful for
+     96 /// creating popup navigation menus and so on.
+     97
+     98
+     99 $THEME->chameleonenabled = true;
+    100
+    101 /// By setting this to false it disables editing of the stylesheets
+    102 /// this saves the overhead of loading chameleon on each page
+    103 /// viewed by a user who can edit pages. it is recommended to
+    104 /// set this to false once you're satisfied with your theme.
+    105
+    106 $THEME->chameleonteachereditenabled = false;
+    107
+    108 /// If you use chameleon as a course theme setting this to true
+    109 /// will allow teachers on that course to edit the theme.
+    110
+
+Add the 'user_styles' sheet to the list of style sheets used. Note that it must be the last one in the list.
+
+////////////////////////////////////////////////////////////////////////////////
+/// This file contains a few configuration variables that control 
+/// how Moodle uses this theme.
+////////////////////////////////////////////////////////////////////////////////
+
+
+$THEME->sheets = array('styles_color', 'styles_font', 'styles_layout', 'styles_moz', 'user_styles' );
+
+/// This variable is an array containing the names of all the 
+/// stylesheet files you want included in this theme, and in what order
+////////////////////////////////////////////////////////////////////////////////
+
+Done now 2 Temp CSS will change
+
+Then you can start working on your CSS for any Moodle page from your browser.
+
+You can see and add CSS properties of the two files temp_user_styles.css and user_styles.css. You can't see or change the CSS properties in your other CSS files in your theme folder.
+Troubleshooting
+Shift click does not open the Chameleon dialog
+
+Please check that Chameleon is turned on by checking the line in config.php:
+
+$THEME->chameleonenabled = true;
+
+
+Your changes are lost on page reload
+
+The user settings or write permissions of the two CSS files "user_styles.css" and "temp_user_styles.css" must be set in a way that Moodle can write the changed CSS to these files.
+
+    When you are able to change the owner of these files please do that. Your web server will run under a specific user like "nobody" or "www-data". Please change the owner of these CSS files to the owner your web server runs with.
+    When you can't change the file owner please change the write permissions of these files. The easy way is to give write permissions to "group" and "others". 
+
+If you can please change the owner because it is more secure than giving write permission to anybody.
+Tips and Tricks
+How can I change the background of the "messages" with Chameleon?
+
+Not in the way you are used with a click on the page area you want to change. Some areas of Moodle are not accessible with Chameleon. You may add the message CSS selectors and their properties below in Chameleon with copy and paste. The CSS below mainly disables background images. You may change the properties to get different colours or whatever you want.
+
+    You may click anywhere on any page but the message pages to open the Chameleon dialogue
+    Click on the "Free Edit" button to open the edit field with your CSS code
+    Scroll to the end of your code or to a place you consider best for the message CSS
+    Copy the selectors/properties below and paste them into the edit field
+    Save as usual with "Save Temp" if you want to check the changes first or with "Save Server" 
+
+
+body#message-user {
+  background-image: none;
+}
+body#message-messages {
+  background-image: none;
+}
+body#message-send {
+  background-image: none;
+}
+body#message-user div#content {
+  margin-top: 0;
+  padding-top: 0;
+}
+body#message-user div#header {
+  display: none;
+}
+
+How can I change the background of the "chat" window with Chameleon?
+
+Not in the way you are used with a click on the page area you want to change. Some areas of Moodle are not accessible with Chameleon. You may add the message CSS selectors and their properties below in Chameleon with copy and paste. The CSS below mainly disables background images, hides the page header and adjusts some positioning. You may change the properties to get different colours or whatever you want.
+
+    You may click anywhere on any page but not the chat window to open the Chameleon dialogue
+    Click on the "Free Edit" button to open the edit field with your CSS code
+    Scroll to the end of your code or to a place you consider best for the chat CSS
+    Copy the selectors/properties below and paste them into the edit field
+    Save as usual with "Save Temp" if you want to check the changes first or with "Save Server" 
+
+
+body#mod-chat-index table.generaltable td.c0 {
+  background-image: none;
+}
+#mod-chat-gui_header_js-chatinput #header {
+  display: none;
+}
+#mod-chat-gui_header_js-chatinput #page {
+  background-image: none;
+}
+#mod-chat-gui_header_js-chatinput {
+  background-image: none;
+}
+#mod-chat-gui_header_js-users #header {
+  display: none;
+}
+#mod-chat-gui_header_js-users #page {
+  background-image: none;
+}
+#mod-chat-gui_header_js-users {
+  background-image: none;
+}
+body#mod-chat-view div#content {
+  padding-top: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+body#mod-chat-view table#layout-table td#middle-column {
+  padding-top: 30px;
+}
+
+See also
+
+    Video showing how to use the interactive Moodle theme, Chameleon
+    Chameleon - an interactive Moodle theme forum discussion
+    Link font size bigger forum discussion illustrating an alternative use 
+
+Categories:
+
+    Themes
+    Moodle 1.6
+
+    Article
+    Page Comments
+    View source
+    History
+
+    Log in
+
+Navigation
+
+    Main Page
+    About Moodle
+    Teacher
+    Administrator
+    Recent changes
+    Help
+
+More docs
+
+    Moodle Docs 2.5
+    Developer Docs
+    Docs overview
+
+Toolbox
+
+    What links here
+    Related changes
+    Special pages
+    Printable version
+    Permanent link
+
+Search
+ 
+Powered by MediaWiki
+
+    This page was last modified on 1 December 2009, at 05:04.
+    Content is available under GNU General Public License.
+    About MoodleDocs
+    Disclaimers
+
+moodlelogo
+

@@ -1,0 +1,108 @@
+GIT HUB COMMANDS:
+
+
+****USE GIT HELP to display a list of commands:********************************
+
+git help  "command name to receive specific help on this commmand"
+******************************************************************************
+
+
+NOTE:  After setting-up GIT use the following commands to establish your user name and email:
+------------------------------------------------------------------------------------------
+git config --global user.name "Your Name Here"
+
+git config --global user.email user@youremail.com   - Use your user email here
+
+git config --global color.ui tru		- Add colors to the command line
+
+
+=============================================================
+mkdir directory_name	Create a repo directory for use
+
+cd directory_name	Change to this directory 
+
+git init		This will create a local empty directory
+
+git status		- Show status
+
+git add filename.file_extension
+
+git commit -m "Your notes get added here"	- See what has been done so far
+
+==  Check the status again ==
+
+git add --all 		- Adds all new or modified files
+
+git status		- Checking for changes again
+
+git commit - m 		- ""
+
+git log			- Displaying changes to the current directory
+
+
+
+
+
+git init filename  -  initialize a repository for GIT
+
+
+git status      	- check the status of the current repository
+
+
+git init filename  -  initialize a repository for GIT
+
+
+git status      	- check the status of the current repository
+
+git add filename 	- add the specific file to the current repository
+
+git commit -m "type content here to add to a file"  	- to add and commit content to an existing file in the currently repository
+
+git add -m '*.txt'      
+
+git commit -m 'Add all the filename txt files'        - add all the text files with the specific filename in it to the repository for staging
+
+git log   		- Review the log for current repository
+
+git remote add origin https://github.com/try-git/try_git.git 	- You must typically name your main remote as "origin" 
+
+git push -u origin master   - Source: Copied directly from https://try.github.io/levels/1/challenges/11 -
+				"The push command tells Git where to put our commits when we're ready, and boy we're ready. 
+				So let's push our local changes to our origin repo (on GitHub).
+
+				The name of our remote is origin and the default local branch name is master. 
+				The -u tells Git to remember the parameters, 
+				so that next time we can simply run git push and Git will know what to do."
+
+git pull origin master 	- Check for recent changes and pull down any most recent changes
+
+git diff HEAD		- Check and compare what changes have been made to a file.
+
+
+git diff directory/filename.file extension 	
+
+git diff --staged 	- Comparing changes that have already been staged
+
+git reset filedirectory/filename.file extension 	- Rolling back changes since the last commit
+
+git checkout --- filename.file extension 	- Letting Git know no further changes will be made to this file 
+
+git branch clean_up	- Removing items by creaning a branch called "clean_up"
+
+git checkout clean_up   	- Reviewing a branch
+
+git checkout - b new_branch	- Checking out and cleaning up a branch simultaneously
+
+git rm '*.txt'		- Remove all text files.
+
+git commit -am  	- Removing deleted files along with a commit action
+
+git checkout master	- View all deleted files and return to the master
+
+git merge clean_up	- Instructing Git to clean-up the master
+
+git branch clean_up	- Deleting the branch clean-up
+
+git push		- Push all changes and updates
+
+
